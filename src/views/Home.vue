@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <div class="flex justify-center">
+      <img alt="Vue logo" src="../assets/logo.png" />
+    </div>
+    <div class="flex justify-center">
+      <!-- <img alt="Gift Box" src="../assets/gift-box.png" /> -->
+    </div>
+
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
