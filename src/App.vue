@@ -1,47 +1,57 @@
 <template>
-  <div id="app" class="flex flex-col justify-between">
-    <div id="nav" class="p-6">
-      <router-link to="/">
-        <img :src="require('./assets/images/logo.png')" alt />
-      </router-link>
-    </div>
-    <div class="flex justify-center flex-col relative lg:p-0 p-5">
-      <div class="lg:text-6xl text-4xl text-white font-bold">
-        OUR WEBSITE IS
-        <br />COMING SOON
+  <div id="app" class>
+    <div class="flex flex-col justify-between h-full">
+      <div id="nav" class="p-6 flex justify-center lg:justify-start">
+        <router-link tag="div" class="flex h-10" to="/">
+          <img :src="require('./assets/images/Asset 1.svg')" alt />
+        </router-link>
       </div>
-      <div
-        class="lg:text-3xl text-2xl text-white z-10 cursor-pointer"
-      >In the mean time, here's a gift for you</div>
-      <div class="flex justify-center lg:h-64 h-56">
-        <img
-          class="fixed lg:top-56 md:top-40 top-56 z-0 cursor-pointer"
-          :src="require('./assets/images/gift-box.png')"
-          alt
-        />
-      </div>
-      <div class="flex justify-center lg:mt-28 md:mt-56">
-        <div class="flex">
-          <input
-            class="px-3 py-4 lg:w-96 md:w-72 primary-text-dark"
-            type="text"
-            placeholder="Enter Email"
-          />
-          <button class="text-1xl p-4 bg-white primary-text">Notify Me!</button>
+      <div class="flex justify-center flex-col lg:p-0 p-5 h-10/12">
+        <div class="lg:text-6xl text-4xl text-white font-bold slide-up">
+          OUR WEBSITE IS
+          <br />COMING SOON.
+        </div>
+        <div
+          class="lg:text-3xl text-2xl text-indigo-100 z-10 cursor-pointer mb-5 slide-up-second"
+        >In the mean time, here's a gift for you</div>
+        <div class="flex justify-center relative md:h-96 h-52 slide-up-third w-auto">
+          <a
+            href="https://drive.google.com/uc?export=download&id=1PU2cuDlNM_EKAHalO20VP04JPOOZyv4O"
+            class="absolute lg:-top-28 md:-top-24 -top-28 z-0"
+          >
+            <img class :src="require('./assets/images/giftBox.svg')" alt />
+          </a>
+        </div>
+        <div class="w-full">
+          <div class="flex h-12 justify-center">
+            <input
+              class="px-3 py-4 lg:w-96 md:w-72 w-11/12 primary-text-dark outline-none"
+              type="text"
+              placeholder="Enter Email"
+            />
+            <button class="lg:text-1xl text-xs p-4 bg-white primary-text outline-none">Notify Me!</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex justify-between lg:flex-row flex-col p-6 items-center">
-      <div class="flex">
-        <img :src="require('./assets/images/linkedin-logo.png')" alt />
-        <img class="mx-8" :src="require('./assets/images/instagram-logo.png')" alt />
-        <img :src="require('./assets/images/twitter-logo.png')" alt />
+      <div class="flex justify-between lg:flex-row flex-col p-6 items-center">
+        <div class="flex">
+          <a href="http://linkedin.com/company/episod-x" target="_blank">
+            <img :src="require('./assets/images/linkedinLogo.svg')" alt />
+          </a>
+          <a href="https://instagram.com/episod_x?igshid=32dt2vb6vcss" target="_blank">
+            <img class="mx-8" :src="require('./assets/images/instagramLogo.svg')" alt />
+          </a>
+          <a href="https://twitter.com/episod_x" target="_blank">
+            <img :src="require('./assets/images/twitterLogo.svg')" alt />
+          </a>
+        </div>
+        <div class="lg:pt-0 pt-5 primary-text-dark-text">&#169;Episod X 2020</div>
       </div>
-      <div class="lg:pt-0 pt-5 primary-text-dark-text">&#169;Episod X 2020</div>
+      <!-- <router-view /> -->
     </div>
-    <!-- <router-view /> -->
   </div>
 </template>
+
 
 <style lang="scss">
 #app {
@@ -49,11 +59,45 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  // color: #2c3e50;
   background-color: #ff0087;
+  min-height: 100vh;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10%);
+    // opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slide-up 1s ease-in;
+  &-second {
+    animation: slide-up 2s ease-in 0s;
+  }
+  &-third {
+    animation: slide-up 3s ease-in-out 0s;
+  }
+}
+
+a {
+  transition: fill 0.3s ease-in-out;
+  transform: scale(1, 1);
+  &:hover {
+    transform: scale(1.05, 1.05);
+  }
 }
 
 .primary-text {
