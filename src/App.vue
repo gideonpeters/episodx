@@ -29,7 +29,9 @@
               type="text"
               placeholder="Enter Email"
             />
-            <button class="lg:text-1xl text-xs p-4 bg-white primary-text outline-none">Notify Me!</button>
+            <button
+              class="lg:text-sm text-xs lg:p-4 p-1 bg-white primary-text outline-none"
+            >Notify Me!</button>
           </div>
         </div>
       </div>
@@ -54,8 +56,9 @@
 
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300&display=swap");
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, "Poppins", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
