@@ -25,7 +25,7 @@
         <div class="w-full">
           <div class="flex h-12 justify-center">
             <mailchimp-subscribe
-              url="https://xyz.us7.list-manage/subscribe/post-json"
+              url="https://us7.list-manage/subscribe/post-json"
               user-id="fa40008b95b554b7dee664825"
               list-id="926939037e"
               @error="onError"
