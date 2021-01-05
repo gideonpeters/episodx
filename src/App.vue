@@ -37,7 +37,7 @@
                     required
                     class="px-3 py-4 lg:w-96 md:w-72 w-11/12 primary-text-dark outline-none h-full"
                     type="text"
-                    placeholder="Enter Email"
+                    placeholder="Enter Email "
                     @input="setEmail($event.target.value)"
                   />
                   <button
@@ -82,7 +82,7 @@ export default {
   },
   data: () => ({
     isSubscribed: false,
-    errorMessage: ""
+    errorMessage: "error"
   }),
   methods: {
     onSuccess() {
