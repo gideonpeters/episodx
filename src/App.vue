@@ -23,7 +23,7 @@
           </a>
         </div>
         <div class="w-full">
-          <div class="flex h-12 justify-center">
+          <!-- <div class="flex h-12 justify-center">
             <mailchimp-subscribe
               url="https://us7.list-manage/subscribe/post-json"
               user-id="fa40008b95b554b7dee664825"
@@ -51,6 +51,49 @@
                 </form>
               </template>
             </mailchimp-subscribe>
+          </div>-->
+          <div>
+            <div id="mc_embed_signup" class="flex h-12 justify-center">
+              <form
+                action="https://xyz.us7.list-manage.com/subscribe/post?u=fa40008b95b554b7dee664825&amp;id=926939037e"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_blank"
+              >
+                <div id="mc_embed_signup_scroll flex flex-row">
+                  <input
+                    type="email"
+                    name="EMAIL"
+                    class="px-3 py-4 lg:w-96 md:w-72 w-11/12 primary-text-dark outline-none h-full"
+                    id="mce-EMAIL"
+                    placeholder="email address"
+                    required
+                  />
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input
+                      type="text"
+                      name="b_fa40008b95b554b7dee664825_926939037e"
+                      tabindex="-1"
+                      value
+                    />
+                  </div>
+                  <!-- <div class> -->
+                  <input
+                    type="submit"
+                    value="Notify Me!"
+                    name="subscribe"
+                    id="mc-embedded-subscribe"
+                    class="lg:text-sm text-xs lg:p-4 p-1 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-full"
+                  />
+                  <!-- </div> -->
+                </div>
+              </form>
+            </div>
+
+            <!--End mc_embed_signup-->
           </div>
         </div>
       </div>
