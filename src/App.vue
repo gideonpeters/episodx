@@ -37,7 +37,7 @@
                     required
                     class="px-3 py-4 lg:w-96 md:w-72 w-11/12 primary-text-dark outline-none h-full"
                     type="text"
-                    placeholder="Enter Email "
+                    placeholder="Enter Email"
                     @input="setEmail($event.target.value)"
                   />
                   <button
@@ -45,7 +45,7 @@
                     v-if="!success || !loading"
                     class="lg:text-sm text-xs lg:p-4 p-1 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-full"
                   >Notify Me!</button>
-                  <div v-if="error">{{ error }}</div>
+                  <div v-if="error">Something went wrong, try again</div>
                   <div v-if="success">Yay!</div>
                   <div v-if="loading">Loading…</div>
                 </form>
@@ -68,7 +68,6 @@
         </div>
         <div class="lg:pt-0 pt-5 primary-text-dark-text">&#169;Episod X 2020</div>
       </div>
-      <!-- <router-view /> -->
     </div>
   </div>
 </template>
