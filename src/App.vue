@@ -16,7 +16,7 @@
         >In the mean time, here's a gift for you</div>
         <div class="flex justify-center relative md:h-96 h-52 slide-up-third w-auto">
           <a
-            href="https://drive.google.com/uc?export=download&id=1PU2cuDlNM_EKAHalO20VP04JPOOZyv4O"
+            href="https://drive.google.com/uc?export=download&id=1-Ddba6dPpL4vd4CUpHwL1lcIG9yY3oyP"
             class="absolute lg:-top-28 md:-top-24 -top-28 z-0"
           >
             <img class :src="require('./assets/images/giftBox.svg')" alt />
@@ -24,14 +24,33 @@
         </div>
         <div class="w-full">
           <div class="flex h-12 justify-center">
-            <input
-              class="px-3 py-4 lg:w-96 md:w-72 w-11/12 primary-text-dark outline-none"
-              type="text"
-              placeholder="Enter Email"
-            />
-            <button
-              class="lg:text-sm text-xs lg:p-4 p-1 bg-white primary-text outline-none"
-            >Notify Me!</button>
+            <mailchimp-subscribe
+              url="https://xyz.us7.list-manage/subscribe/post"
+              user-id="fa40008b95b554b7dee664825"
+              list-id="926939037e"
+              @error="onError"
+              @success="onSuccess"
+            >
+              <template v-slot="{ subscribe, setEmail, error, success, loading }">
+                <form @submit.prevent="subscribe" class="d-flex">
+                  <input
+                    required
+                    class="px-3 py-4 lg:w-96 md:w-72 w-11/12 primary-text-dark outline-none h-full"
+                    type="text"
+                    placeholder="Enter Email"
+                    @input="setEmail($event.target.value)"
+                  />
+                  <button
+                    type="submit"
+                    v-if="!success || !loading"
+                    class="lg:text-sm text-xs lg:p-4 p-1 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-full"
+                  >Notify Me!</button>
+                  <div v-if="error">{{ error }}</div>
+                  <div v-if="success">Yay!</div>
+                  <div v-if="loading">Loading…</div>
+                </form>
+              </template>
+            </mailchimp-subscribe>
           </div>
         </div>
       </div>
@@ -53,6 +72,28 @@
     </div>
   </div>
 </template>
+
+<script>
+import MailchimpSubscribe from "vue-mailchimp-subscribe";
+
+export default {
+  components: {
+    MailchimpSubscribe
+  },
+  data: () => ({
+    isSubscribed: false,
+    errorMessage: ""
+  }),
+  methods: {
+    onSuccess() {
+      this.isSubscribed = true;
+    },
+    onError() {
+      this.errorMessage = "Something went wrong, try again";
+    }
+  }
+};
+</script>
 
 
 <style lang="scss">
