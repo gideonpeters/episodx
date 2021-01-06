@@ -12,14 +12,18 @@
           <br />COMING SOON.
         </div>
         <div
-          class="xl:text-3xl lg:text-2xl text-2xl text-indigo-100 z-10 cursor-pointer mb-5 slide-up-second"
+          class="xl:text-2xl lg:text-1xl text-1xl text-indigo-100 z-10 cursor-pointer mb-5 slide-up-second"
         >In the mean time, here's a gift for you</div>
-        <div class="flex justify-center relative md:h-96 lg:h-11/12 h-52 slide-up-third w-auto">
+        <div class="h-72 lg:h-96 sm:h-80 flex justify-center relative slide-up-third w-auto">
           <a
             href="https://drive.google.com/uc?export=download&id=1-Ddba6dPpL4vd4CUpHwL1lcIG9yY3oyP"
-            class="absolute xl:-top-28 lg:-top-24 md:-top-24 -top-28 z-0"
+            class="absolute h-full xl:-top-28 lg:-top-24 md:-top-20 -top-20 sm:-top-32 z-0"
           >
-            <img class="h-80 lg:h-full md:h-full" :src="require('./assets/images/giftBox.svg')" alt />
+            <img
+              class="h-80 sm:h-80 xl:h-100 lg:h-10/12 md:h-10/12"
+              :src="require('./assets/images/giftBox.svg')"
+              alt
+            />
           </a>
         </div>
         <div class="w-full">
@@ -66,7 +70,7 @@
                   <input
                     type="email"
                     name="EMAIL"
-                    class="px-3 py-4 lg:w-96 md:w-72 w-7/12 primary-text-dark outline-none h-full"
+                    class="px-3 py-4 lg:w-96 md:w-72 w-7/12 primary-text-dark outline-none h-full rounded-tr-none rounded-br-none"
                     id="mce-EMAIL"
                     placeholder="email address"
                     required
@@ -78,6 +82,7 @@
                       name="b_fa40008b95b554b7dee664825_926939037e"
                       tabindex="-1"
                       value
+                      class
                     />
                   </div>
                   <!-- <div class> -->
@@ -86,7 +91,7 @@
                     value="Notify Me!"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    class="lg:text-sm text-xs lg:p-4 p-1 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-full"
+                    class="lg:text-sm rounded-tl-none rounded-bl-none text-xs lg:p-4 p-1 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-full"
                   />
                   <!-- </div> -->
                 </div>
