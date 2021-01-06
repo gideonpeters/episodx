@@ -6,20 +6,20 @@
           <img :src="require('./assets/images/Asset 1.svg')" alt />
         </router-link>
       </div>
-      <div class="flex justify-center flex-col lg:p-0 p-5 h-10/12">
-        <div class="lg:text-6xl text-4xl text-white font-bold slide-up">
+      <div class="flex justify-center flex-col lg:p-0 p-5 h-8/12">
+        <div class="xl:text-6xl lg:text-5xl text-4xl sm:text-3xl text-white font-bold slide-up">
           OUR WEBSITE IS
           <br />COMING SOON.
         </div>
         <div
-          class="lg:text-3xl text-2xl text-indigo-100 z-10 cursor-pointer mb-5 slide-up-second"
+          class="xl:text-3xl lg:text-2xl text-2xl text-indigo-100 z-10 cursor-pointer mb-5 slide-up-second"
         >In the mean time, here's a gift for you</div>
-        <div class="flex justify-center relative md:h-96 h-52 slide-up-third w-auto">
+        <div class="flex justify-center relative md:h-96 lg:h-11/12 h-52 slide-up-third w-auto">
           <a
             href="https://drive.google.com/uc?export=download&id=1-Ddba6dPpL4vd4CUpHwL1lcIG9yY3oyP"
-            class="absolute lg:-top-28 md:-top-24 -top-28 z-0"
+            class="absolute xl:-top-28 lg:-top-24 md:-top-24 -top-28 z-0"
           >
-            <img class :src="require('./assets/images/giftBox.svg')" alt />
+            <img class="h-80 lg:h-full md:h-full" :src="require('./assets/images/giftBox.svg')" alt />
           </a>
         </div>
         <div class="w-full">
@@ -53,20 +53,20 @@
             </mailchimp-subscribe>
           </div>-->
           <div>
-            <div id="mc_embed_signup" class="flex h-12 justify-center">
+            <div id="mc_embed_signup" class="flex h-12 justify-center w-full">
               <form
                 action="https://xyz.us7.list-manage.com/subscribe/post?u=fa40008b95b554b7dee664825&amp;id=926939037e"
                 method="post"
                 id="mc-embedded-subscribe-form"
                 name="mc-embedded-subscribe-form"
-                class="validate"
+                class="validate flex"
                 target="_blank"
               >
-                <div id="mc_embed_signup_scroll flex flex-row">
+                <div id="mc_embed_signup_scroll flex flex-row w-full">
                   <input
                     type="email"
                     name="EMAIL"
-                    class="px-3 py-4 lg:w-96 md:w-72 w-11/12 primary-text-dark outline-none h-full"
+                    class="px-3 py-4 lg:w-96 md:w-72 w-7/12 primary-text-dark outline-none h-full"
                     id="mce-EMAIL"
                     placeholder="email address"
                     required
@@ -100,13 +100,13 @@
       <div class="flex justify-between lg:flex-row flex-col p-6 items-center">
         <div class="flex">
           <a href="http://linkedin.com/company/episod-x" target="_blank">
-            <img :src="require('./assets/images/linkedinLogo.svg')" alt />
+            <img class="h-8" :src="require('./assets/images/linkedinLogo.svg')" alt />
           </a>
           <a href="https://instagram.com/episod_x?igshid=32dt2vb6vcss" target="_blank">
-            <img class="mx-8" :src="require('./assets/images/instagramLogo.svg')" alt />
+            <img class="mx-8 h-8" :src="require('./assets/images/instagramLogo.svg')" alt />
           </a>
           <a href="https://twitter.com/episod_x" target="_blank">
-            <img :src="require('./assets/images/twitterLogo.svg')" alt />
+            <img class="h-8" :src="require('./assets/images/twitterLogo.svg')" alt />
           </a>
         </div>
         <div class="lg:pt-0 pt-5 primary-text-dark-text">&#169;Episod X 2020</div>
