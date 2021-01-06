@@ -3,7 +3,7 @@
     <div class="flex flex-col justify-between h-full">
       <div id="nav" class="p-6 flex justify-center lg:justify-start">
         <router-link tag="div" class="flex h-10" to="/">
-          <img :src="require('./assets/images/Asset 1.svg')" alt />
+          <img class="h-52 -mt-16" :src="require('./assets/images/logo.svg')" alt />
         </router-link>
       </div>
       <div class="flex justify-center flex-col lg:p-0 p-5 h-8/12">
@@ -63,14 +63,14 @@
                 action="https://xyz.us7.list-manage.com/subscribe/post?u=fa40008b95b554b7dee664825&amp;id=926939037e"
                 method="post"
                 name="mc-embedded-subscribe-form"
-                class="validate flex"
+                class="validate"
                 target="_blank"
               >
-                <div class="flex flex-row w-full h-12">
+                <div class="flex flex-row xl:w-full lg:w-96 w-72 md:w-96 h-12 justify-center">
                   <input
                     type="email"
                     name="EMAIL"
-                    class="px-3 py-4 lg:w-96 md:w-72 w-7/12 primary-text-dark outline-none h-12 rounded-none rounded-none"
+                    class="px-3 py-4 lg:w-96 md:w-72 w-10/12 primary-text-dark outline-none h-12 rounded-none rounded-none"
                     placeholder="email address"
                     required
                   />
@@ -87,7 +87,7 @@
                   <!-- <div class> -->
                   <button
                     type="submit"
-                    class="lg:text-sm rounded-none rounded-none text-xs lg:p-4 p-1 my-0 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-12"
+                    class="w-3/12 lg:w-3/12 lg:text-sm rounded-none rounded-none text-xs p-1 my-0 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-12"
                   >Notify Me!!</button>
                   <!-- <input
                     type="submit"
@@ -106,13 +106,13 @@
       <div class="flex justify-between lg:flex-row flex-col p-6 items-center">
         <div class="flex">
           <a href="http://linkedin.com/company/episod-x" target="_blank">
-            <img class="h-8" :src="require('./assets/images/linkedinLogo.svg')" alt />
+            <img class="h-16" :src="require('./assets/images/linkedinLogo.svg')" alt />
           </a>
           <a href="https://instagram.com/episod_x?igshid=32dt2vb6vcss" target="_blank">
-            <img class="mx-8 h-8" :src="require('./assets/images/instagramLogo.svg')" alt />
+            <img class="mx-8 h-16" :src="require('./assets/images/instagramLogo.svg')" alt />
           </a>
           <a href="https://twitter.com/episod_x" target="_blank">
-            <img class="h-8" :src="require('./assets/images/twitterLogo.svg')" alt />
+            <img class="h-16" :src="require('./assets/images/twitterLogo.svg')" alt />
           </a>
         </div>
         <div class="lg:pt-0 pt-5 primary-text-dark-text">&#169;Episod X 2020</div>
