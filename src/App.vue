@@ -1,6 +1,6 @@
 <template>
   <div id="app" class>
-    <div class="flex flex-col justify-between h-full">
+    <div class="flex flex-col justify-between h-full min-h-screen">
       <div id="nav" class="p-6 flex justify-center lg:justify-start">
         <router-link tag="div" class="flex h-10" to="/">
           <img class="h-32 -mt-10" :src="require('./assets/images/logo.svg')" alt />
@@ -175,8 +175,8 @@ export default {
   text-align: center;
   // color: #2c3e50;
   background-color: #ff0087;
-  min-height: 100vh;
-  height: 100vh;
+  // min-height: 100vh;
+  // height: 100vh;
   width: 100vw;
   overflow-x: hidden;
 }
