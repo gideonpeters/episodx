@@ -178,7 +178,7 @@ export default {
   // min-height: 100vh;
   // height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @keyframes slide-up {
