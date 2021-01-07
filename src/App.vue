@@ -14,7 +14,7 @@
         <div
           class="xl:text-2xl lg:text-1xl text-1xl text-indigo-100 z-10 cursor-pointer mb-5 slide-up-second"
         >In the mean time, here's a gift for you</div>
-        <div class="h-48 lg:h-96 sm:h-80 flex justify-center relative slide-up-third w-auto">
+        <div class="h-36 lg:h-96 sm:h-80 flex justify-center relative slide-up-third w-auto">
           <a
             @click="report"
             href="https://drive.google.com/uc?export=download&id=1-Ddba6dPpL4vd4CUpHwL1lcIG9yY3oyP"
