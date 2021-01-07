@@ -21,7 +21,7 @@
             class="absolute h-full xl:-top-28 lg:-top-24 md:-top-20 -top-20 sm:-top-32 z-0"
           >
             <img
-              class="h-80 sm:h-80 xl:h-100 lg:h-9/12 md:h-10/12"
+              class="h-64 sm:h-80 xl:h-100 lg:h-9/12 md:h-10/12"
               :src="require('./assets/images/giftBox.png')"
               alt
             />
