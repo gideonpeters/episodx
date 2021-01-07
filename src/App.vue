@@ -14,14 +14,14 @@
         <div
           class="xl:text-2xl lg:text-1xl text-1xl text-indigo-100 z-10 cursor-pointer mb-5 slide-up-second"
         >In the mean time, here's a gift for you</div>
-        <div class="h-72 lg:h-96 sm:h-80 flex justify-center relative slide-up-third w-auto">
+        <div class="h-48 lg:h-96 sm:h-80 flex justify-center relative slide-up-third w-auto">
           <a
             @click="report"
             href="https://drive.google.com/uc?export=download&id=1-Ddba6dPpL4vd4CUpHwL1lcIG9yY3oyP"
             class="absolute h-full xl:-top-28 lg:-top-24 md:-top-20 -top-20 sm:-top-32 z-0"
           >
             <img
-              class="h-64 sm:h-80 xl:h-100 lg:h-9/12 md:h-10/12"
+              class="h-48 sm:h-80 xl:h-100 lg:h-9/12 md:h-10/12"
               :src="require('./assets/images/giftBox.png')"
               alt
             />
