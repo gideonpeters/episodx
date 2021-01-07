@@ -7,7 +7,7 @@
         </router-link>
       </div>
       <div class="flex justify-center flex-col lg:p-0 p-5 h-8/12">
-        <div class="xl:text-6xl lg:text-5xl text-4xl sm:text-3xl text-white font-bold slide-up">
+        <div class="xl:text-6xl lg:text-4xl text-4xl sm:text-3xl text-white font-bold slide-up">
           OUR WEBSITE IS
           <br />COMING SOON.
         </div>
@@ -16,12 +16,13 @@
         >In the mean time, here's a gift for you</div>
         <div class="h-72 lg:h-96 sm:h-80 flex justify-center relative slide-up-third w-auto">
           <a
+            @click="report"
             href="https://drive.google.com/uc?export=download&id=1-Ddba6dPpL4vd4CUpHwL1lcIG9yY3oyP"
             class="absolute h-full xl:-top-28 lg:-top-24 md:-top-20 -top-20 sm:-top-32 z-0"
           >
             <img
-              class="h-80 sm:h-80 xl:h-100 lg:h-10/12 md:h-10/12"
-              :src="require('./assets/images/giftBox.svg')"
+              class="h-80 sm:h-80 xl:h-100 lg:h-9/12 md:h-10/12"
+              :src="require('./assets/images/giftBox.png')"
               alt
             />
           </a>
@@ -57,7 +58,7 @@
             </mailchimp-subscribe>
           </div>-->
           <div v-if="isVisible">
-            <div id="mc_embed_signup" class="flex h-12 justify-center w-full">
+            <div id="mc_embed_signup" class="flex h-10 md:h-12 lg:h-12 justify-center w-full">
               <form
                 @submit="isSubscribed = true"
                 action="https://xyz.us7.list-manage.com/subscribe/post?u=fa40008b95b554b7dee664825&amp;id=926939037e"
@@ -66,11 +67,13 @@
                 class="validate"
                 target="_blank"
               >
-                <div class="flex flex-row xl:w-full lg:w-96 w-72 md:w-96 h-12 justify-center">
+                <div
+                  class="flex flex-row xl:w-full lg:w-96 w-72 md:w-96 h-10 md:h-12 lg:h-12 justify-center"
+                >
                   <input
                     type="email"
                     name="EMAIL"
-                    class="px-3 py-4 lg:w-96 md:w-72 w-10/12 primary-text-dark outline-none h-12 rounded-none rounded-none"
+                    class="px-3 py-4 lg:w-96 md:w-72 w-10/12 primary-text-dark outline-none h-10 md:h-12 lg:h-12 rounded-none rounded-none"
                     placeholder="Email Address"
                     required
                   />
@@ -87,7 +90,7 @@
                   <!-- <div class> -->
                   <button
                     type="submit"
-                    class="w-3/12 button-anime lg:w-3/12 lg:text-sm rounded-none rounded-none text-xs p-1 my-0 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-12"
+                    class="w-3/12 button-anime lg:w-3/12 lg:text-sm rounded-none rounded-none text-xs p-1 my-0 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-10 md:h-12 lg:h-12"
                   >Notify Me!!</button>
                   <!-- <input
                     type="submit"
@@ -109,7 +112,7 @@
             <img class="h-16" :src="require('./assets/images/linkedinLogo.svg')" alt />
           </a>
           <a href="https://instagram.com/episod_x?igshid=32dt2vb6vcss" target="_blank">
-            <img class="mx-8 h-16" :src="require('./assets/images/instagramLogo.svg')" alt />
+            <img class="h-16" :src="require('./assets/images/instagramLogo.svg')" alt />
           </a>
           <a href="https://twitter.com/episod_x" target="_blank">
             <img class="h-16" :src="require('./assets/images/twitterLogo.svg')" alt />
@@ -136,6 +139,15 @@ export default {
   methods: {
     onSuccess() {
       this.isSubscribed = true;
+    },
+    report() {
+      console.log("herrrr");
+      this.$ga.event({
+        eventCategory: "file_download",
+        eventAction: "file_download",
+        eventLabel: "download",
+        eventValue: 1
+      });
     },
     onError() {
       this.errorMessage = "Something went wrong, try again";
