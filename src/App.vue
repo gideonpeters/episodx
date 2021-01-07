@@ -3,7 +3,7 @@
     <div class="flex flex-col justify-between h-full">
       <div id="nav" class="p-6 flex justify-center lg:justify-start">
         <router-link tag="div" class="flex h-10" to="/">
-          <img class="h-52 -mt-16" :src="require('./assets/images/logo.svg')" alt />
+          <img class="h-32 -mt-10" :src="require('./assets/images/logo.svg')" alt />
         </router-link>
       </div>
       <div class="flex justify-center flex-col lg:p-0 p-5 h-8/12">
@@ -56,10 +56,10 @@
               </template>
             </mailchimp-subscribe>
           </div>-->
-          <div v-if="!isSubscribed">
+          <div v-if="isVisible">
             <div id="mc_embed_signup" class="flex h-12 justify-center w-full">
               <form
-                @formchange="isSubscribed = true"
+                @submit="isSubscribed = true"
                 action="https://xyz.us7.list-manage.com/subscribe/post?u=fa40008b95b554b7dee664825&amp;id=926939037e"
                 method="post"
                 name="mc-embedded-subscribe-form"
@@ -71,7 +71,7 @@
                     type="email"
                     name="EMAIL"
                     class="px-3 py-4 lg:w-96 md:w-72 w-10/12 primary-text-dark outline-none h-12 rounded-none rounded-none"
-                    placeholder="email address"
+                    placeholder="Email Address"
                     required
                   />
                   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -87,7 +87,7 @@
                   <!-- <div class> -->
                   <button
                     type="submit"
-                    class="w-3/12 lg:w-3/12 lg:text-sm rounded-none rounded-none text-xs p-1 my-0 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-12"
+                    class="w-3/12 button-anime lg:w-3/12 lg:text-sm rounded-none rounded-none text-xs p-1 my-0 bg-white primary-text outline-none focus:outline-none hover:opacity-75 h-12"
                   >Notify Me!!</button>
                   <!-- <input
                     type="submit"
@@ -130,6 +130,7 @@ export default {
   },
   data: () => ({
     isSubscribed: false,
+    isVisible: true,
     errorMessage: "error"
   }),
   methods: {
@@ -138,6 +139,15 @@ export default {
     },
     onError() {
       this.errorMessage = "Something went wrong, try again";
+    }
+  },
+  watch: {
+    isSubscribed(v) {
+      if (v) {
+        setTimeout(() => {
+          this.isVisible = false;
+        }, 2000);
+      }
     }
   }
 };
@@ -175,17 +185,24 @@ export default {
 }
 
 .slide-up {
-  animation: slide-up 1s ease-in;
+  animation: slide-up 3s ease-in;
   &-second {
-    animation: slide-up 2s ease-in 0s;
+    animation: slide-up 3s ease-in 0s;
   }
   &-third {
-    animation: slide-up 3s ease-in-out 0s;
+    animation: slide-up 1s ease-in-out 0s;
   }
 }
 
 a {
   transition: fill 0.3s ease-in-out;
+  transform: scale(1, 1);
+  &:hover {
+    transform: scale(1.05, 1.05);
+  }
+}
+
+.button-anime {
   transform: scale(1, 1);
   &:hover {
     transform: scale(1.05, 1.05);
