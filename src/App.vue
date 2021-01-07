@@ -144,8 +144,8 @@ export default {
       console.log("herrrr");
       this.$ga.event({
         eventCategory: "file_download",
-        eventAction: "file_download",
-        eventLabel: "download",
+        eventAction: "click",
+        eventLabel: "file_download",
         eventValue: 1
       });
     },
